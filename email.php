@@ -1,32 +1,21 @@
+
+
 <?php
 	$back = "<p><a href=\"javascript: history.back()\">Вернуться назад</a></p>";
- 
-	$name = $_POST['callform-login'];
- 	$tel = $_POST['callform-tel'];
- 	$email = $_POST['callform-email'];
 
- 	$name = htmlspecialchars($name);
- 	$tel = htmlspecialchars($tel);
- 	$email = htmlspecialchars($email);
+	if(!empty($_POST['callform-login']) and !empty($_POST['callform-tel']) and !empty($_POST['callform-email'])) {
+		$name = trim(strip_tags($_POST['callform-login']));
+		$phone = trim(strip_tags($_POST['callform-tel']));
+		$mail = trim(strip_tags($_POST['callform-email']));
 
- 	$name = urldecode($name);
- 	$tel = urldecode($tel);
- 	$email = urldecode($email);
+		mail('sertamaster23@yandex.ru', 'Заявка на соотрудничество', 'Вам написал: '.$name.'<br />Его номер: '.$phone.'<br />Его почта: '.$mail);
 
- 	$name = trim($name);
- 	$tel = trim($tel);
- 	$email = trim($email);
+		echo "Ваше сообщение успешно отправлено!<Br> Вы получите ответ в ближайшее время<Br> $back";
 
- 	if (mail('a.abrosimow2012@yandex.ru',
- 			'Заявка на соотрудничество',
- 			'Имя: '.$name.'\n'.
- 			'Телефон: '.$tel.'\n'.
- 			'Email: '.$email.'\n')
- 	){
- 		echo ('Письмо успешно отправлено!');
- 	}
-
- 	else {
- 		echo('Есть ошибки! Проверьте данные...');
- 	}
+		exit;
+	} 
+	else {
+		echo "Для отправки сообщения заполните все поля! $back";
+		exit;
+	}
 ?>
