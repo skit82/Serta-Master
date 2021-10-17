@@ -678,7 +678,7 @@ body {
 	.fact {
 		position: relative;
 		min-height: 831px;
-    background: url(../img/fact-mobile-img2.png) 0 178px no-repeat, url(../img/fact-mobile-img1.png) no-repeat, #253980;
+    background: url(../img/fact-mobile-img2.jpg) 0 178px no-repeat, url(../img/fact-mobile-img1.png) no-repeat, #253980;
     background-size: cover, cover;
 	}
 	.fact__wrapper {
