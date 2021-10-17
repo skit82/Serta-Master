@@ -1096,7 +1096,7 @@ body {
 .page-footer {
 	background: rgba(167, 45, 52, 1);
 	padding-top: 60px;
-	padding-bottom: 140px;
+	padding-bottom: 30px;
 }
 .page-footer__wrapper {
 	max-width: 1440px;
@@ -1108,6 +1108,7 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 100%;
+	margin-bottom: 100px;
 }
 .page-footer__contact-box h2 {
 	width: 505px;
@@ -1216,6 +1217,7 @@ body {
 	}
 	.page-footer__contact {
 		flex-direction: column;
+		margin-bottom: 50px;
 	}
 	.page-footer__logo img {
 		width: 305px;
@@ -1424,5 +1426,38 @@ form label {
     top: 308px;
     left: 17px;
     z-index: 1;
+	}
+}
+
+.page-footer__copyright p {
+	margin: 0px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.page-footer__copyright a {
+	display: block;
+	border-bottom: 2px solid #000000;
+	color: #ffffff;
+	width: 380px;
+}
+
+@media (max-width: 767px) {
+	.page-footer__copyright p {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-footer__copyright p {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.page-footer__copyright a {
+		width: 250px;
 	}
 }
